@@ -7,3 +7,4 @@ if [ -d "$HOME/.config/pwnit" ]; then
 fi
 ln -sf $(pwd)/pwnit/ ~/.config/
 
+pip3 install ropper --break-system-packages
