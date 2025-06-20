@@ -8,3 +8,4 @@ fi
 ln -sf $(pwd)/pwnit/ ~/.config/
 
 pip3 install ropper --break-system-packages
+gem install one_gadget
