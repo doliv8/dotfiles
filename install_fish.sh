@@ -4,7 +4,7 @@ sudo -u root chsh -s /usr/bin/fish
 chsh -s /usr/bin/fish
 
 # create user conf
-if [ -d "~/.config/fish" ]; then
+if [ -d "$HOME/.config/fish" ]; then
 	mv ~/.config/fish ~/.config/fish~
 	echo "Backup of existing fish config has been created"
 fi
