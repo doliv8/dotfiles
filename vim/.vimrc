@@ -46,7 +46,10 @@ Plugin 'vim-scripts/indentpython.vim'
 "Plugin 'vim-syntastic/syntastic'
 Plugin 'lifepillar/vim-mucomplete'
 Plugin 'davidhalter/jedi-vim'
-Plugin 'jasonccox/vim-wayland-clipboard'
+" conditional loading of wayland clipboard
+if exists('$WAYLAND_DISPLAY')
+	Plugin 'jasonccox/vim-wayland-clipboard'
+endif
 Plugin 'tpope/vim-commentary'
 
 " All of your Plugins must be added before the following line
