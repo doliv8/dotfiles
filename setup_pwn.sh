@@ -8,4 +8,9 @@ fi
 ln -sf $(pwd)/pwnit/ ~/.config/
 
 pip3 install ropper --break-system-packages
-gem install one_gadget
+sudo apt install ruby
+sudo gem install one_gadget
+
+wget -q -O ~/.pwninit/pwninit https://github.com/io12/pwninit/releases/latest/download/pwninit
+chmod +x ~/.pwninit/pwninit
+
