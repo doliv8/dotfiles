@@ -1,3 +1,5 @@
+sudo apt install ruby-rubygems ruby-dev patchelf elfutils
+
 pip3 install pwntools --break-system-packages
 pip install git+https://github.com/Church-17/pwnit.git --break-system-packages
 
@@ -8,8 +10,8 @@ fi
 ln -sf $(pwd)/pwnit/ ~/.config/
 
 pip3 install ropper --break-system-packages
-sudo apt install ruby
 sudo gem install one_gadget
+sudo gem install seccomp-tools
 
 wget -q -O ~/.pwninit/pwninit https://github.com/io12/pwninit/releases/latest/download/pwninit
 chmod +x ~/.pwninit/pwninit

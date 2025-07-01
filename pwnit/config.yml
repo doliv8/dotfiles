@@ -1,0 +1,40 @@
+check_functions:
+  enable: true
+  list:
+    - "system"
+    - "gets"
+    - "ptrace"
+    - "memfrob"
+    - "strfry"
+    - "execve"
+    - "execl"
+    - "execlp"
+    - "execle"
+    - "execv"
+    - "execvp"
+    - "execvpe"
+
+patch:
+  enable: true
+  path: "./debug_dir/<exe_basename>"
+
+seccomp:
+  enable: true
+
+yara:
+  enable: true
+  path: "~/.config/pwnit/findcrypt3.rules"
+
+libc_source:
+  enable: false
+
+templates:
+  default:
+    path: "~/.config/pwnit/doliv_template.py"
+    interactions: false
+    pwntube_variable: "io"
+    tab: "\t"
+    script_path: "exploit_<exe_basename:>.py"
+
+# commands:
+#   - "echo '<exe_basename>'"
