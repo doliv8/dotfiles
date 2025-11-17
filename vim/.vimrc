@@ -128,3 +128,6 @@ endfunction
 	" setup vim-commentary comment type
 au BufRead,BufNewFile *.s setlocal commentstring=!%s
 
+" setup kiity terminal
+set term=kitty
+map <C-/> gcc
