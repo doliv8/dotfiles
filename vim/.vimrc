@@ -14,11 +14,11 @@ set noeol nofixeol
 
 augroup python_files
     autocmd!
-    " indent with tabs
-    " autocmd FileType python setlocal noexpandtab
-    " autocmd FileType python set tabstop=4
-    " autocmd FileType python set shiftwidth=4
-	" indent with 4 spaces
+	" 1 tab indent
+	" autocmd FileType python setlocal noexpandtab
+	" autocmd FileType python set tabstop=4
+	" autocmd FileType python set shiftwidth=4
+	" 4 spaces indent
     autocmd FileType python set softtabstop=4
     autocmd FileType python set tabstop=4
     autocmd FileType python set shiftwidth=4
@@ -32,8 +32,8 @@ set encoding=utf-8
 
 
 " VUNDLE
-set nocompatible              " required
-filetype off                  " required
+set nocompatible			" required
+filetype off				" required
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -55,8 +55,8 @@ endif
 Plugin 'tpope/vim-commentary'
 
 " All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
+call vundle#end()			" required
+filetype plugin indent on	" required
 
 
 " Enable folding
@@ -85,6 +85,7 @@ set completeopt+=menuone
 "disable jedi-vim autocomplete on dot
 let g:jedi#popup_on_dot = 0
 
+" to comment
 map <C-_> gcc
 
 " IJVM file support
@@ -133,3 +134,11 @@ au BufRead,BufNewFile *.s setlocal commentstring=!%s
 " setup kiity terminal
 set term=kitty
 map <C-/> gcc
+
+" allow for long strings parsing
+set synmaxcol=10000
+" set soft line wraps
+set linebreak
+set breakindent
+set showbreak=...
+
