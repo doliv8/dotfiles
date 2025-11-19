@@ -3,12 +3,14 @@ source $VIMRUNTIME/defaults.vim
 " indentation basics
 set tabstop=4 shiftwidth=4 softtabstop=4
 
-" Set tabstop to 2 spaces for HTML, CSS, and JavaScript
+" Set tabstop to 2 spaces for HTML, CSS, JavaScript and PHP
 autocmd FileType html,css,javascript,php set tabstop=2 shiftwidth=2 expandtab
+
+" make sage files into python filetype
+au BufreadPost *.sage set filetype=python
 
 " disable added \n at eof
 set noeol nofixeol
-
 
 augroup python_files
     autocmd!
