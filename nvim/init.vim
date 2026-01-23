@@ -83,6 +83,8 @@ endfunc
 map <C-_> gcc
 map <C-/> gcc
 
+nnoremap <S-f> :YcmCompleter FixIt<CR>
+
 " idk good selection V[move]gq
 "set cindent
 "set formatoptions=tcqr
