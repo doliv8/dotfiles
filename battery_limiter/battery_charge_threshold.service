@@ -4,7 +4,7 @@ After=multi-user.target
 
 [Service]
 Type=oneshot
-ExecStart=/bin/bash -c "echo '1 72 40 70' > /sys/devices/platform/huawei-wmi/smart_charge"
+ExecStart=/bin/bash -c "echo '1 72 40 80' > /sys/devices/platform/huawei-wmi/smart_charge"
 
 [Install]
 WantedBy=multi-user.target
